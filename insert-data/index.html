@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>kr.rileyghost.com</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="icon" href="https://angularjs.org/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="app.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body>
+<br /><br />
+<div class="container" style="width:750px;">
+    <h3 align="center"> REGISTER </h3>
+    <br /><br />
+    <div ng-app="myapp" ng-controller="formcontroller">
+        <form name="userForm" ng-submit="insertData()">
+
+            <div class="form-group">
+                <label>First Name <span class="text-danger">*</span></label>
+                <input type="text" name="first_name" ng-model="insert.first_name" class="form-control" />
+                <span class="text-danger" ng-show="errorFirstname">{{errorFirstname}}</span>
+            </div>
+            <div class="form-group">
+                <label>Last Name <span class="text-danger">*</span></label>
+                <input type="text" name="last_name" ng-model="insert.last_name" class="form-control" />
+                <span class="text-danger" ng-show="errorLastname">{{errorLastname}}</span>
+            </div>
+            <div class="form-group">
+                <label>Birthday <span class="text-danger">*</span></label>
+                <input type="text" name="dob" ng-model="insert.dob" class="form-control" />
+                <span class="text-danger" ng-show="errorDob">{{errorDob}}</span>
+            </div>
+            <div class="form-group">
+                <label>Age <span class="text-danger">*</span></label>
+                <input type="text" name="age" ng-model="insert.age" class="form-control" />
+                <span class="text-danger" ng-show="errorAge">{{errorAge}}</span>
+            </div>
+            <div class="form-group">
+                <label>City <span class="text-danger">*</span></label>
+                <input type="text" name="city" ng-model="insert.city" class="form-control" />
+                <span class="text-danger" ng-show="errorCity">{{errorCity}}</span>
+            </div>
+            <div class="form-group">
+                <label>Email <span class="text-danger">*</span></label>
+                <input type="email" name="email" ng-model="insert.email" class="form-control" />
+                <span class="text-danger" ng-show="errorEmail">{{errorEmail}}</span>
+            </div>
+            <div class="form-group">
+                <label>Phone <span class="text-danger">*</span></label>
+                <input type="text" name="phone" ng-model="insert.phone" class="form-control" />
+                <span class="text-danger" ng-show="errorPhone">{{errorPhone}}</span>
+            </div>
+            <div class="form-group">
+                <label>Create a new Password <span class="text-danger">*</span></label>
+                <input type="password" name="pass" ng-model="insert.pass" class="form-control" />
+                <span class="text-danger" ng-show="errorPass">{{errorPass}}</span>
+            </div>
+
+            <br />
+            <div class="form-group">
+                <input type="submit" name="insert" class="btn btn-info" value="Submit"/>
+            </div>
+
+        </form>
+
+        <label class="text-success" ng-show="successInsert">{{successMsg}}</label></br></br></hr>
+    </div>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128987902-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-128987902-1');
+</script>
+
+</body>
+<?php include('footer.php'); ?>
+</html>
